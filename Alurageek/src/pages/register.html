@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alura Geek | Crear cuenta</title>
+  <link rel="stylesheet" href="../assets/fonts/style.css">
+  <link rel="stylesheet" href="../assets/css/register.css">
+  <link rel="icon" type="image/png" href="../assets/images/logo-title.png">
+</head>
+<body>
+  <header>
+    <section class="register__header">
+      <div class="header__logo">
+        <a href="../../index.html">
+          <img src="../assets/images/logo.svg" alt="Logotipo da AluraGeek">
+        </a>       
+      </div>
+    </section>
+  </header>
+  <main>
+    <form class="register__container" data-form-register>
+      <h2 class="register__title">Cree su cuenta.</h2>
+      <div class="register__field">
+        <label for="username">Nombre</label>
+        <input type="text" id="username" name="username" data-form-input data-rules="required|min=3|max=40">
+      </div>
+      <div class="register__field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" data-form-input data-rules="required|email|max=50">
+      </div>
+      <div class="register__field">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" data-form-input data-rules="required|min=8">
+      </div>
+      <div class="register__field">
+        <label for="password-confirm">Confirme su contraseña</label>
+        <input type="password" id="passwordConfirm" name="passwordConfirm" data-form-input data-rules="required|password">
+      </div>
+      <button type="submit" class="register__button" data-form-submit>Regístrar</button>
+    </form>
+  </main>
+  <footer>
+    <section class="contact container">
+        <img src="../assets/images/logo.svg" alt="Logotipo da AluraGeek" class="contact__logo">
+        <ul class="contact__list">
+          <li class="contact__link">
+            <a href="#">¿Quiénes somos?</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Política de privacidade</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Programa fidelidad</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Nuestra historia</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Quiero ser miembro</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Anúncie aquí</a>
+          </li>
+        </ul>
+      <form action="" method="post">
+        <fieldset class="contact__form">
+          <legend class="form__title">Contáctenos</legend>
+          <div class="input__container">
+            <input type="text" class="form__input main-input" id="name" required>
+            <label for="name" class="suspended-label">Nombre</label>
+          </div>
+          <label for="message" class="sr-only">Digite su mensaje</label>
+          <textarea name="message" id="message" cols="30" rows="4" class="form__message main-input" placeholder="Escriba su mensaje" required></textarea>
+          <button class="form__button main-button">Enviar mensaje</button>
+        </fieldset>
+      </form>
+    </section>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="../scripts/register.js"></script>
+</body>
+</html>
